@@ -1,24 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Navbar from './src/screens/BottomNavigation';
-import TopNavBar from './src/screens/TopNavigation';
-import Home from './src/screens/Home';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+
+const routes = {
+  Home: Home,
+  Search: SearchScreen,
+};
+
+const routeConfig = {
+  initialRouteName: 'Home',
+};
+const AppNavigator = createStackNavigator(routes, routeConfig);
+const AppContainer = createAppContainer(AppNavigator);
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <TopNavBar />
-      <Home />
-      <Navbar />
-    </View>
-  );
+  return <AppContainer />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

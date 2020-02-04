@@ -14,17 +14,17 @@ export default function TopNavBar() {
       /> */}
 
       <View style={styles.brand}>
-        <Text>List</Text>
+        <Text style={styles.brandTitle}>Latest</Text>
       </View>
       <View style={styles.topNavIcons}>
         <View>
-          <Text>Icon</Text>
+          <Text style={styles.icon}>Icon</Text>
         </View>
         <View>
-          <Text>Icon</Text>
+          <Text style={styles.icon}>Icon</Text>
         </View>
         <View>
-          <Text>***</Text>
+          <Text style={styles.icon}>***</Text>
         </View>
       </View>
     </View>
@@ -38,18 +38,28 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 21,
     borderStyle: 'solid',
-    borderWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: '#ccc',
   },
   brand: {
     flex: 3,
-    borderStyle: 'solid',
-    borderWidth: 1,
+    padding: 3,
+    alignContent: 'center',
+  },
+  brandTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#ccc',
   },
   topNavIcons: {
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    borderStyle: 'solid',
-    borderWidth: 1,
+    padding: 3,
+  },
+  icon: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#ccc',
   },
 });
