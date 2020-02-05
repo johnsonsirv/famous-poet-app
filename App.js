@@ -1,6 +1,8 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import Home from './src/screens/Home';
+import SearchScreen from './src/screens/Search';
 
 const routes = {
   Home: Home,
