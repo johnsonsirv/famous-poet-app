@@ -3,10 +3,12 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Home from './src/screens/Home';
 import SearchScreen from './src/screens/Search';
+import PoemTrack from './src/screens/PoemTrack';
 
 const routes = {
   Home: Home,
   Search: SearchScreen,
+  Track: PoemTrack,
 };
 
 const routeConfig = {

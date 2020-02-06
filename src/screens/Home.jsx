@@ -8,7 +8,7 @@ import BottomNavbar from './BottomNavigation';
 export default function Home(props) {
   return (
     <View style={styles.container}>
-      <PoemList />
+      <PoemList navigation={props.navigation} />
       <BottomNavbar navigation={props.navigation} />
     </View>
   );

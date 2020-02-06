@@ -9,9 +9,10 @@ import {
 } from 'react-native';
 import logo from '../../assets/logo-2.png';
 
-export default function Home() {
+export default function PoemList(props) {
+  const { navigate } = props.navigation;
   const onPressButton = e => {
-    alert(`Button Test ${e._targetInst.key}`);
+    alert(`Button Test ${e.target.value}`);
   };
   const poems = [
     { id: 1, title: 'sample title' },
@@ -45,9 +46,9 @@ export default function Home() {
         data={poems}
         renderItem={({ item }) => (
           <TouchableHighlight
-            key={item.id}
-            onPress={e => {
-              onPressButton(e);
+            value={item}
+            onPress={() => {
+              navigate('Track', { trackId: item.id, trackTitle: item.title });
             }}
             underlayColor="white"
           >
