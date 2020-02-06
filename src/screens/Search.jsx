@@ -1,12 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import BottomNavbar from './BottomNavigation';
 
-export default function SearchScreen() {
+export default function SearchScreen(props) {
   return (
     <View style={styles.search}>
-      <View>
+      <View style={styles.searchArea}>
         <Text style={styles.searchText}>Search Page</Text>
       </View>
+      <BottomNavbar navigation={props.navigation} />
     </View>
   );
 }
@@ -19,8 +21,13 @@ const styles = StyleSheet.create({
   },
   search: {
     flex: 1,
-    flexDirection: 'row',
-    borderStyle: 'solid',
+    alignContent: 'space-between',
+    justifyContent: 'space-between',
+    borderWidth: 1,
+    borderColor: '#ccc',
+  },
+  searchArea: {
+    flex: 8,
     borderWidth: 1,
     borderColor: '#ccc',
   },

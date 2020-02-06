@@ -1,8 +1,18 @@
 import React from 'react';
-import { FlatList, View, Text, StyleSheet, Image } from 'react-native';
+import {
+  FlatList,
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableHighlight,
+} from 'react-native';
 import logo from '../../assets/logo-2.png';
 
 export default function Home() {
+  const onPressButton = e => {
+    alert(`Button Test ${e._targetInst.key}`);
+  };
   const poems = [
     { id: 1, title: 'sample title' },
     { id: 2, title: 'sample title sample title sample title sample title' },
@@ -34,15 +44,23 @@ export default function Home() {
       <FlatList
         data={poems}
         renderItem={({ item }) => (
-          <View style={styles.list}>
-            <View style={styles.track}>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.details}>{'Sample descriptiom'}</Text>
+          <TouchableHighlight
+            key={item.id}
+            onPress={e => {
+              onPressButton(e);
+            }}
+            underlayColor="white"
+          >
+            <View style={styles.list}>
+              <View style={styles.track}>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.details}>{'Sample descriptiom'}</Text>
+              </View>
+              <View style={styles.image}>
+                <Image source={logo} />
+              </View>
             </View>
-            <View style={styles.image}>
-              <Image source={logo} />
-            </View>
-          </View>
+          </TouchableHighlight>
         )}
       />
     </View>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import BottomNavbar from './BottomNavigation';
-import TopNavBar from './TopNavigation';
+import HomeHeaderTitle from './HomeHeaderTitle';
+import HomeHeaderButtons from './HomeHeaderButtons';
 import PoemList from '../components/PoemList';
+import BottomNavbar from './BottomNavigation';
 
 export default function Home(props) {
   return (
     <View style={styles.container}>
-      <TopNavBar />
       <PoemList />
       <BottomNavbar navigation={props.navigation} />
     </View>
@@ -15,7 +15,8 @@ export default function Home(props) {
 }
 
 Home.navigationOptions = {
-  title: 'Latest',
+  headerTitle: () => <HomeHeaderTitle />,
+  headerRight: () => <HomeHeaderButtons />,
 };
 
 const styles = StyleSheet.create({
