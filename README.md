@@ -1,4 +1,4 @@
-<h1 align="center">The Famous Poet Mobile App - audio streaming for African poems</h1>
+<h1 align="center">The Famous Poet Mobile App</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/johnsonsirv/famous-poet#readme" target="_blank">
@@ -13,7 +13,7 @@
   <a href="https://twitter.com/vokeugo" target="_blank">
     <img alt="Twitter: vokeugo" src="https://img.shields.io/twitter/follow/vokeugo.svg?style=social" />
   </a>
-  <a href="https://twitter.com/vokeugo" target="_blank">
+  <a href="https://famous-poet.netlify.com" target="_blank">
     <img alt="netlify" src="https://api.netlify.com/api/v1/badges/c9424649-60c1-4860-aeb2-a1dfede32144/deploy-status" />
   </a>
 
